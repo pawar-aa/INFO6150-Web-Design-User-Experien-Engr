@@ -23,4 +23,4 @@ This assignment consists of creating a webpage with various HTML5 elements and a
   - Appropriate colors for headings and layouts
   - Styling for the entire webpage
 
-To view the project, please visit the GitHub repository: [GitHub Repository URL]
+To view the project, please visit the GitHub repository: https://github.com/pawar-aa/WebDesignFall23Assignments)https://github.com/pawar-aa/WebDesignFall23Assignments
