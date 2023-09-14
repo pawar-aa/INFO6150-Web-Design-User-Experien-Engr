@@ -1,5 +1,8 @@
 # Assignment Readme
 
+Author: Aashay Pawar
+NUID: 002134382
+
 This assignment consists of creating a webpage with various HTML5 elements and applying styles using an external CSS file. Below are the key elements used in this project:
 
 - HTML5 Elements:
