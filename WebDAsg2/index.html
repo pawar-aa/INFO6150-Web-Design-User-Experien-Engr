@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/png" href="image/favicon.png">
+    <title>My Professional Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#media">Media</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="image-container about-image frame">
+                <div class="image">
+                    <img src="image/profilePicture.jpeg" alt="Image" class="fit-image grayscale">
+                    <div class="overlay">
+                        <a href="https://aashaypawar.github.io" target="_blank">
+                            <button class="hover-button">Click Me</button>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="about-text">
+                <p>
+                    As a highly motivated and talented international student pursuing a Master's degree in Information Systems at Northeastern University, I bring a unique perspective to the field of software development. With over three years of industry experience, I have developed a strong foundation in various areas of software development, including full-stack web development, database design and management, cloud computing, infrastructure management, machine learning, and mobile app development for Android and iOS.
+                </p>
+                <br>
+                <p>
+                    My experience in enterprise-scale software development has given me a deep understanding of Agile/SCRUM methodologies, and I am proficient in a range of programming languages, including Javascript (Node.js), React, Java, C/C++, C#, Kotlin, and Swift. My passion for technology and my eagerness to learn have driven me to explore new areas of software development and continuously improve my skills.
+                </p>
+                <br>
+                <p>
+                    In addition to my academic and professional accomplishments, I have also developed and published several mobile applications on the Google Play Store. I have also been recognized for my contributions to research and have been published in several academic journals. My code contributions on Github showcase my proficiency in software development and my passion for creating high-quality, innovative solutions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <menu>  
+            <li><a href="https://example.com/link1">
+                <img src="image/githubLogo.png" alt="Project 1">
+            </a></li>  
+            <li><a href="https://example.com/link2">
+                <img src="image/hackerrankLogo.png" alt="Project 2">
+            </a></li>  
+            <li><a href="https://example.com/link3">
+                <img src="image/leetcodeLogo.png" alt="Project 3">
+            </a></li>  
+            <li><a href="https://example.com/link4">
+                <img src="image/googleScholarLogo.png" alt="Project 4">
+            </a></li>  
+         </menu>  
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <table>
+            <tr>
+                <th>Programming</th>
+                <th>Proficiency</th>
+            </tr>
+            <tr>
+                <td>Java, C++, C, Kotlin, Swift</td>
+                <td>
+                    <div class="bar">
+                        <div class="progress" style="width: 100%;"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Python, JavaScript, TypeScript</td>
+                <td>
+                    <div class="bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>MySQL, Oracle, MongoDB, AWS, GCP</td>
+                <td>
+                    <div class="bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        Email: <a href="mailto:pawar.aa@northeastern.edu">pawar.aa@northeastern.edu</a>
+        <br>
+        Phone: <a href="tel:+16172384119">+16172384119</a>
+        <br><br>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+
+    <section id="media">
+        <h2>Media</h2>
+
+        <div class="audio-frame">
+            <audio controls autoplay>
+                <source src="audio/audio.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <br>
+        <div class="video-container">
+            <video controls autoplay>
+                <source src="video/video.mp4" type="video/mp4">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 AashayP<a href="sourceCode.html"><Button>View Code</Button></a></p>
+    </footer>
+</body>
+</html>
