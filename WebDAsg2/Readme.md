@@ -1,6 +1,6 @@
-Name:
-NUID:
-Email:
+Name: Aashay Pawar
+NUID: 002134382
+Email: pawar.aa@northeastern.edu
 
 <h2>Assignment-2</h2>
 
