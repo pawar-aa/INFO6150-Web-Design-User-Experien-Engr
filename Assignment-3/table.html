@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Table CheckList</title>
+    <link rel="stylesheet" type="text/css" href="table.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+	<p>Full Name: Aashay Pawar</p>
+ 	<p>NUID: 002134382</p>
+    <table id="myTable">
+      <thead>
+        <tr>
+          <th></th>
+          <th>STUDENT</th>
+          <th>ADVISOR</th>
+          <th>AWARD<br />STATUS</th>
+          <th>SEMESTER</th>
+          <th>TYPE</th>
+          <th>BUDGET<br />#</th>
+          <th>PERCENTAGE</th>
+		  <th id="delete-column" style="display: none;">DELETE</th>
+    	<th id="edit-column" style="display: none;">EDIT</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <input
+              id="checkbox"
+              type="checkbox"
+              onclick="onCheckboxClick(this)"
+            /><br /><br /><img
+              src="down.png"
+              width="25px"
+              onclick="return displayHiddenRow('dropDownTextArea1')"
+            />
+          </td>
+          <td>Student 1</td>
+          <td>Teacher 1</td>
+          <td>Approved</td>
+          <td>Fall</td>
+          <td>TA</td>
+          <td>12345</td>
+          <td>100%</td>
+        </tr>
+        <tr
+          style="display: none"
+          id="dropDownTextArea1"
+          class="dropDownTextArea"
+        >
+          <td colspan="8">
+            Advisor:<br /><br />
+            Award Details<br />
+            Summer 1-2014(TA)<br />
+            Budget Number: <br />
+            Tuition Number: <br />
+            Comments:<br /><br /><br />
+            Award Status:<br /><br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              id="checkbox"
+              type="checkbox"
+              onclick="onCheckboxClick(this)"
+            /><br /><br /><img
+              src="down.png"
+              width="25px"
+              onclick="return displayHiddenRow('dropDownTextArea2')"
+            />
+          </td>
+          <td>Student 2</td>
+          <td>Teacher 2</td>
+          <td>Approved</td>
+          <td>Fall</td>
+          <td>TA</td>
+          <td>23456</td>
+          <td>100%</td>
+        </tr>
+        <tr
+          style="display: none"
+          class="dropDownTextArea"
+          id="dropDownTextArea2"
+        >
+          <td colspan="8">
+            Advisor:<br /><br />
+            Award Details<br />
+            Summer 1-2014(TA)<br />
+            Budget Number: <br />
+            Tuition Number: <br />
+            Comments:<br /><br /><br />
+            Award Status:<br /><br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              id="checkbox"
+              type="checkbox"
+              onclick="onCheckboxClick(this)"
+            /><br /><br />
+            <img
+              src="down.png"
+              width="25px"
+              onclick="return displayHiddenRow('dropDownTextArea3')"
+            />
+          </td>
+          <td>Student 3</td>
+          <td>Teacher 3</td>
+          <td>Approved</td>
+          <td>Fall</td>
+          <td>TA</td>
+          <td>34567</td>
+          <td>100%</td>
+        </tr>
+        <tr
+          style="display: none"
+          class="dropDownTextArea"
+          id="dropDownTextArea3"
+        >
+          <td colspan="8">
+            Advisor:<br /><br />
+            Award Details<br />
+            Summer 1-2014(TA)<br />
+            Budget Number: <br />
+            Tuition Number: <br />
+            Comments:<br /><br /><br />
+            Award Status:<br /><br /><br />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br /><br />
+
+    <button id="button" onclick="submitButton()" disabled>SUBMIT SELECTED AWARDS</button>
+    <button id="add" onclick="addNewRow()">Add New Student</button>
+
+    <nav class="socialmediaicons"></nav>
+    <script src="script.js"></script>
+  </body>
+</html>
