@@ -1,0 +1,39 @@
+body{
+    background-color: #00704A;
+}
+label {	
+    float: left;
+    width: 150px;}
+#container1{
+    width: 700px;
+    margin: auto;
+    background-color: white;
+} 
+#container2{
+    width: auto;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    height: 100vh;         
+} 
+table {
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+
+td, th {
+    border: 2px double black;
+}
+
+main{
+    padding: 50px;
+}
+@media screen and (max-width: 600px) {
+    table {width:100%;}
+    div {width:100%;}
+    form {width:100%;}
+ }
+ @media screen and (max-width: 360px) {
+    table {width:100%;}
+}

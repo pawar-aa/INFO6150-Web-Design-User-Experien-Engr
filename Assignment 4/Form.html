@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Feedback</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	</head>
+	<body>
+		<div id="container1"> 
+			<main>
+				<b>Assignment-4</b><br>Name: Aashay Pawar<br>NUID: 002134382<br><br>
+				<h2>Feeback</h2>
+				<h3>Love something? Hate something? Let us know!</h3>
+				Note : Fields marked with an asterisk(*) are mandatory
+				<br><br>
+				<form method="post" id="myForm" >
+					<label>Title*:</label>
+					<input type="radio" name="title" id="miss" value="Miss" required="required"/>Miss
+					<input type="radio" name="title" id="mr" value="Mr" required="required"/>Mr.
+					<input type="radio" name="title" id="mrs" value="Mrs" required="required"/>Mrs.
+					<br><br>
+					<label for="firstName">First Name*:</label>
+					<input type="text" name="firstName" id="firstName" placeholder="First Name" required />	
+					<br><br>
+					<div id="error_firstName" style="display: none; color: red;">
+						Invalid input for the First Name field. Only text are allowed.
+						<br><br>
+					</div>
+					
+					<label for="lastName">Last Name*:</label>
+					<input type="text" name="lastName" id="lastName" placeholder="Last Name" required/>
+					<br><br>
+					<div id="error_lastName" style="display: none; color: red;">
+						Invalid input for the Last Name field. Only text are allowed.
+						<br><br>
+					</div>
+					
+					<label for="emailId">Email Id*:</label>
+					<input type="text" name="emailId" id="emailId" placeholder="yourname@domain.com" required />
+					<br><br>
+					<div id="error_emailId" style="display: none; color: red;">
+						Please enter your Northeastern email id.
+						<br><br>
+					</div>
+
+					<label for="phoneNumber">Phone Number*:</label>
+					<input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx" required/>
+					<br><br>
+					<div id="error_phoneNumber" style="display: none; color: red;">
+						Please enter a valid phone number in format xxx-xxx-xxxx.
+						<br><br>
+					</div>
+
+					<label for="streetAddress1">Street Address 1*:</label>
+					<input type="text" name="streetAddress1" id="streetAddress1" placeholder="address" required/>
+					<br><br>
+
+					<label for="streetAddress2">Street Address 2:</label>
+					<input type="text" name="streetAddress2" id="streetAddress2" placeholder="address" />
+					<br><br>
+
+					<label for="city">City*:</label>
+					<input type="text" name="city" id="city" placeholder="city" required/>
+					<br><br>
+
+					<label for="state">State*:</label>
+					<input type="text" name="state" id="state" placeholder="state" required/>
+					<br><br> 
+					
+					<label for="zipcode">ZipCode*:</label>
+					<input type="text" name="zipcode" id="zipcode" placeholder="xxxxxx" required />
+					<br><br>
+					<div id="error_zipcode" style="display: none; color: red;">
+						Invalid input for the ZipCode field. Please enter valid ZipCode.
+						<br><br>
+					</div>
+					
+					<label for="hear">How did you hear*:</label>
+					<input type='checkbox' name="link" value="facebook"/> Facebook
+					<input type='checkbox' name="link" value="google"/> Google
+					<input type='checkbox' name="link" value="yelp"/> Yelp 
+					<br><br> 
+
+					<label for="products">Products:*</label>
+					<select name="products" id="optionSelect" required>
+						<option value="--Please Choose a Product--">--Please Choose a Product--</option>
+						<option value="MacBook Air">MacBook Air</option>
+						<option value="MacBook Pro">MacBook Pro</option>
+						<option value="Iphone 14">Iphone 14</option>
+						<option value="Iphone 14 Pro">Iphone 14 Pro</option>
+						<option value="AirPods">AirPods</option>
+					</select>
+
+					<div id="error_product" style="display: none; color: red;">
+						Please select an option!
+						<br><br>
+					</div>
+					<br><br>
+					<div id="dynamicCheckbox" style="display: none">
+						<label><span id="spanTag">Yelp</span> <br /><br /></label>
+						<input type="checkbox" id="checkboxSelectDynamic" name="source" value="yelp" required/>
+						
+					</div>
+					<div id="text_area" style="display: none" >
+						<textarea class="form-control" type="text" id="xyz" placeholder="Your comments about Product" name="text_area" rows="1" cols="25" required>
+						</textarea>
+					</div>
+
+					<br><br>
+					<label for="comments">Comments*:</label>
+					<textarea name="text" id="comments" placeholder="Your comments about services" rows="5" cols="25"></textarea>
+					<br><br>
+					<input type="Submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="Reset">
+					<br><br>
+				</form>
+			</main>
+		</div>
+
+		<br><br>
+		<div id="container2">
+			<main>
+				<h2>Feedback Data:</h2>
+				<table id="table">
+					<tr>
+						<th>Title</th>
+						<th>First name</th>
+						<th>Last Name</th>
+						<th>Email ID</th>
+						<th>Phone</th>
+						<th>Street Address 1</th>
+						<th>Street Address 2</th>
+						<th>City</th>
+						<th>State</th>
+						<th>Zipcode</th>
+						<th>Reference</th>
+						<th>Service Comments</th>
+						<th>Product Comments</th>
+					</tr>
+				</table>
+			</main>
+		</div>
+		
+		<script src="script.js"> </script>
+ 	</body>
+</html>
