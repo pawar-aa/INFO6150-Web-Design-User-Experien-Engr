@@ -1,0 +1,70 @@
+%align-center-column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-container {
+  @extend %align-center-column;
+  width: 100vw;
+  height: 70vh;
+}
+
+.login-container {
+  @extend %align-center-column;
+
+  background-color: $primary_3;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 50%;
+
+  @media screen and (max-width: 768px) {
+    width: 70%;
+  }
+
+  &_header {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+  }
+}
+
+.login-container-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 50%;
+  box-sizing: border-box; // Added for padding and width consistency
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  &_input {
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: $background;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+
+    &:focus {
+      border: 1px solid $primary_2;
+    }
+  }
+
+  &_button {
+    background-color: $primary_2;
+    color: #fff;
+    padding: 0.3rem 1rem;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
