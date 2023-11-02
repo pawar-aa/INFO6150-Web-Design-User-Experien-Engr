@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff; /* white background */
+  text-align: center;
+  padding-top: 80px;
+}
+
+.time-label {
+  font-size: 2rem;
+  color: #333;
+  margin: 20px;
+}
+
+.date-picker {
+  margin: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: crimson; /* Crimson background for normal state */
+  color: #fff; /* White text color for all states */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: darkred; /* Dark red background for hover state */
+  /* The text color is already white from the base state */
+}
+
+.button:disabled,
+.button:disabled:hover {
+  background-color: #ccc; /* Grey background for disabled state */
+  color: #666; /* Dark grey text color for disabled state */
+}
+
+
+/* Hide the native arrow for date picker in Chrome, Edge, and Safari */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* Hide the native arrow for date picker in Firefox */
+input[type="date"]::-moz-calendar-picker-indicator {
+  display: none;
+}
+
+/* Hide the native arrow for date picker in IE */
+input[type="date"]::-ms-clear {
+  display: none;
+}
+
+input[type="date"]::-ms-reveal {
+  display: none;
+}

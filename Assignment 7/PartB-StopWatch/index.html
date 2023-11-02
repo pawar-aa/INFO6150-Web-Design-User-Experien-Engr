@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch Web App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stop Watch</h1>
+        <input type="date" id="datePicker" class="date-picker" disabled>
+        <label id="time" class="time-label" aria-live="assertive">00:00:00</label>
+        <div class="button-group">
+            <button class="button" id="startBtn">Start</button>
+            <button class="button" id="stopBtn">Stop</button>
+            <button class="button" id="resetBtn">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

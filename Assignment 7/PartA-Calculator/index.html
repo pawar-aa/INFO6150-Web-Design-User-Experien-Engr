@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Registration Form</title>
+   <link rel="stylesheet" type="text/css" href="styles.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+   <div class="container">
+      <h1>REGISTER</h1>
+      <form id="registration_form">
+         <div>
+            <input type="text" id="form_fname" name="username" required>
+            <label>User Name</label>
+            <span class="error_form" id="fname_error_message"></span>
+         </div>
+
+         <div>
+            <input type="text" id="form_email" name="email" required disabled>
+            <label>Email id</label>
+            <span class="error_form" id="email_error_message"></span>
+         </div>
+
+         <div>
+            <input type="password" id="form_pass" name="password" required disabled>
+            <label>Password</label>
+            <span class="error_form" id="pass_error_message"></span>
+         </div>
+
+         <div>
+            <input type="password" id="confirm_pass" name="confirm_password" required disabled>
+            <label>Confirm Password</label>
+            <span class="error_form" id="confirm_pass_error_message"></span>
+         </div>
+
+         <input type="submit" id="registration_submit" value="Register" disabled>
+      </form>
+   </div>
+
+   <script>
+      $(document).ready(function () {
+         // Validation Functions
+         function validateUsername(username) {
+            if (username.length < 5) {
+               $('#fname_error_message').text('At least 5 characters are required');
+               return false;
+            } else {
+               $('#fname_error_message').empty();
+               $('#form_email').prop('disabled', false);
+               return true;
+            }
+         }
+
+         function validateEmail(email) {
+            const regExp = /[\w\.]+@northeastern\.edu$/;
+            if (!regExp.test(email)) {
+               $('#email_error_message').text('Use your Northeastern ID only');
+               return false;
+            } else {
+               $('#email_error_message').empty();
+               $('#form_pass').prop('disabled', false);
+               return true;
+            }
+         }
+
+         function validatePassword(password) {
+            const passPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
+            if (!passPattern.test(password)) {
+               $('#pass_error_message').text("Password must be at least 8 characters including 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character");
+               $('#confirm_pass').prop('disabled', true);
+               $('#registration_submit').prop('disabled', true);
+               return false;
+            } else {
+               $('#pass_error_message').empty();
+               $('#confirm_pass').prop('disabled', false);
+               return true;
+            }
+         }
+
+         function validateConfirmPassword(confirmPassword) {
+            const password = $('#form_pass').val();
+            if (confirmPassword !== password) {
+               $('#confirm_pass_error_message').text("Passwords do not match.");
+               $('#registration_submit').prop('disabled', true);
+               return false;
+            } else {
+               $('#confirm_pass_error_message').empty();
+               $('#registration_submit').prop('disabled', false);
+               return true;
+            }
+         }
+
+         // Event Handlers
+         $('#form_fname').on('input', function () {
+            validateUsername($(this).val());
+         });
+
+         $('#form_email').on('input', function () {
+            validateEmail($(this).val());
+         });
+
+         $('#form_pass').on('input', function () {
+            validatePassword($(this).val());
+         });
+
+         $('#confirm_pass').on('input', function () {
+            validateConfirmPassword($(this).val());
+         });
+
+         // Form submission
+         $('#registration_form').on('submit', function (e) {
+            e.preventDefault();
+
+            let username = $('#form_fname').val();
+            let email = $('#form_email').val();
+            let password = $('#form_pass').val();
+            let confirmPassword = $('#confirm_pass').val();
+
+            if (validateUsername(username) && validateEmail(email) && validatePassword(password) && validateConfirmPassword(confirmPassword)) {
+               sessionStorage.setItem("username", username);
+               alert("Registration Successful");
+               window.location.href = "simplecalculator.html";
+            } else {
+               console.log("Validation failed. User not redirected.");
+            }
+         });
+      });
+   </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+.container {
+	max-width: 400px;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin: 50px auto;
+	text-align: center;
+}
+  
+input[type="number"],
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	display: inline-block;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+  
+label {
+	margin-left: 5px;
+}
+  
+.error_form {
+	color: red;
+	font-size: 14px;
+}
+  
+button {
+	background-color: crimson;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+  
+button:hover {
+	background-color: darkred;
+	opacity: 0.8;
+}
+  
+.calculator h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+  
+.calculator .input-group {
+	margin-bottom: 10px;
+}
+  
+.calculator .button-group button {
+	grid-column: span 2;
+}
+
+#registration_submit {
+	background-color: crimson;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+  
+#registration_submit:hover {
+	background-color: darkred;
+}

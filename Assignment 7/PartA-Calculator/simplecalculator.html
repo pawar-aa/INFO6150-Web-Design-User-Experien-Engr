@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container calculator">
+    <h1 id="hello">Hello</h1>
+    <div class="input-group">
+      <input type="number" id="firstnumber" placeholder="First Number" />
+      <input type="number" id="secondnumber" placeholder="Second Number" />
+    </div>
+    <div class="button-group">
+      <button data-operation="+">+</button>
+      <button data-operation="-">-</button>
+      <button data-operation="*">&times;</button>
+      <button data-operation="/">÷</button>
+      <button id="clearButton">Clear</button>
+    </div>
+    <div class="input-group">
+      <input type="text" id="result" placeholder="Result" readonly />
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      // Retrieve the username from sessionStorage and update the greeting
+      let username = sessionStorage.getItem("username");
+      if (username) {
+        $('#hello').text(`Hello, ${username}`);
+      } else {
+        $('#hello').text("Hello there");
+      }
+  
+      // Bind the calculate function to the click event of all operation buttons
+    $('.button-group button').click((event) => {
+      let operation = $(event.target).data('operation');
+      calculate(operation);
+    });
+
+    // Bind the clearFields function to the click event of the clear button
+    $('#clearButton').click(() => clearFields());
+  });
+
+  // Single arrow function for all operations
+  const calculate = (operation) => {
+    let firstNumber = parseFloat($('#firstnumber').val());
+    let secondNumber = parseFloat($('#secondnumber').val());
+    let result;
+
+    // Operations object to map operations to functions
+    const operations = {
+      '+': () => firstNumber + secondNumber,
+      '-': () => firstNumber - secondNumber,
+      '*': () => firstNumber * secondNumber,
+      '/': () => secondNumber !== 0 ? firstNumber / secondNumber : "Error: Division by zero"
+    };
+
+    result = operations[operation] ? operations[operation]() : "Error: Invalid operation";
+
+    // Check for errors before setting the value
+    if (typeof result === 'string') {
+      alert(result);
+    } else {
+      $('#result').val(result.toFixed(2)); // toFixed(2) limits the result to two decimal places
+    }
+  };
+  
+    function clearFields() {
+      $('#firstnumber, #secondnumber, #result').val('');
+    }
+  </script>
+</body></html>  
